@@ -141,7 +141,7 @@ aliases = {
     "txn_amount": "amount"
 }
 
-#result = rename_columns(row, aliases)
-#result = trim_values(row)
+result = rename_columns(row, aliases)
+result = trim_values(row)
 
-#print(result)
+print(result)
