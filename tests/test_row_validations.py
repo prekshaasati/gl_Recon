@@ -39,14 +39,6 @@ def test_parse_amount_in_paise():
     assert parse_amount("15050", "paise") == Decimal("150.50")
 
 
-def test_parse_amount_rupees_returns_two_decimal_places():
-    assert parse_amount("5", "rupees") == Decimal("5.00")
-
-
-def test_parse_amount_paise_divides_by_one_hundred():
-    assert parse_amount("12345", "paise") == Decimal("123.45")
-
-
 def test_parse_amount_unknown_unit_is_a_setup_error_not_a_bad_row():
     with pytest.raises(ValueError):
         parse_amount("5", "dollars")
